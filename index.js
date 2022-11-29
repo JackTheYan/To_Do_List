@@ -5,11 +5,11 @@ function App(){
       isCompleted: false,
     },
     {
-      text: 'meet friend for lunch',
+      text: 'hello world',
       isCompleted: false,
     },
     {
-      text: 'build todo app',
+      text: 'bye bye world',
       isCompleted: false,
     }        
   ]);

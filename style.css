@@ -1,14 +1,14 @@
 body {
     margin: 0;
-    font-family: 'Arial';
+    font-family: 'Ariel';
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background: #209cee;
+    background: #190cee;
     padding-bottom: 1em;
   }
 
 h1 {
-  background: white;
+  background: grey;
   padding: .7em;
   margin: 0;
   }
