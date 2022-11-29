@@ -1,42 +1,42 @@
-function App(){
-  const [todos, setTodos] = React.useState([
-    {
-      text: 'learn react',
-      isCompleted: false,
-    },
-    {
-      text: 'hello world',
-      isCompleted: false,
-    },
-    {
-      text: 'bye bye world',
-      isCompleted: false,
-    }        
-  ]);
+function App() {
+    const [todos, setTodos] = React.useState([
+        {
+            text: 'Project One',
+            isCompleted: false
+        },
+        {
+            text: 'Project Two',
+            isCompleted: false
+        },
+        {
+            text: 'Project Three',
+            isCompleted: false
+        }
+    ]);
 
-  const addTodo = text => {
-    const newTodos = [...todos, {text, isCompleted:false}];
-    setTodos(newTodos);
-  }
-  const removeTodo = index => {
-    let temp = [...todos];    
-    temp.splice(index, 1);
-    setTodos(temp);
-  }
+    const addTodo = text => {
+        const newTodos = [...todos, {text:text, isCompleted:false}];
+        setTodos(newTodos);
+    }
 
-  return(
-    <div className="app">
-      <div className="todo-list" >
-        {todos.map((todo, i) => (
-          <Todo key={i} index={i} todo={todo} remove={removeTodo}/>
-        ))}
-        <TodoForm addTodo={addTodo} />
-      </div>
-    </div>
-  );
+    const removeTodo = index => {
+        let temp = [...todos];
+        temp.splice(index,1);
+        setTodos(temp);
+    }
+
+    return(
+        <div className="app">
+            <div className="todo-list">
+                {todos.map( (todo, i) => 
+                    <Todo index={i} key={i} todo={todo} remove={removeTodo}/>)}
+                <TodoForm addTodo={addTodo}/>
+            </div>
+        </div>
+    )
 }
 
 ReactDOM.render(
-  <App/>,
-  document.getElementById('root')
-);
+    <App/>,
+    document.getElementById('root')
+)
